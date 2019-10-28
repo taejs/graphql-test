@@ -1,6 +1,11 @@
-# 사용자가 name을 요청하면 string을 보내겠다는 선언 (!는 필수)
+type Developer {
+    name : String!,
+    age : Int!,
+    IDE : String!
+}
+
 type Query {
-    name : string!
+    developer : Developer!
 }
 
 # 여기는 선언만 되어있고 이 기능을 프로그래밍 해야함
