@@ -1,11 +1,13 @@
 type Developer {
+    id : Int!,
     name : String!,
     age : Int!,
     IDE : String!
 }
 
 type Query {
-    developer : Developer!
+    developers : [Developer]!,
+    developer(id : Int!) : Developer # maybe we won't find that person
 }
 
 # 여기는 선언만 되어있고 이 기능을 프로그래밍 해야함
