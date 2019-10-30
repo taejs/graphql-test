@@ -5,9 +5,14 @@ type Developer {
     IDE : String!
 }
 
+## Query와 Mutation은 예약어
 type Query {
     developers : [Developer]!,
     developer(id : Int!) : Developer # maybe we won't find that person
+}
+type Mutation {
+    addDeveloper (name : String!, age : Int!) : Developer!
+    deleteDeveloper(id : Int!) : Boolean
 }
 
 # 여기는 선언만 되어있고 이 기능을 프로그래밍 해야함
